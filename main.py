@@ -17,18 +17,10 @@ formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(messag
 logger_file_handler.setFormatter(formatter)
 logger.addHandler(logger_file_handler)
 
-try:
-    CHAT_ID = os.environ["CHAT_ID"]
-    TELEGRAM_TOKEN = os.environ["TELEGRAM_TOKEN"]
-
-except KeyError:
-    SOME_SECRET = "Token not available!"
-    #logger.info("Token not available!")
-    #raise
-    #TELEGRAM_TOKEN = "5740632861:AAFFDVj4JLqMz9Poss_AZv9cIH7xXCoAVX0"
-    #CHAT_ID = "593517818"
 
 if __name__ == "__main__":
+    TELEGRAM_TOKEN = "5740632861:AAFFDVj4JLqMz9Poss_AZv9cIH7xXCoAVX0"
+    CHAT_ID = "593517818"
     message = GetLatestTickersPrice(['TSLA','MSFT'])
     url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage?chat_id={CHAT_ID}&text={message}"
     r = requests.get(url)
