@@ -19,9 +19,8 @@ logger.addHandler(logger_file_handler)
 
 
 if __name__ == "__main__":
-    TELEGRAM_TOKEN = "5740632861:AAFFDVj4JLqMz9Poss_AZv9cIH7xXCoAVX0"
-    CHAT_ID = "593517818"
+    TELEGRAM_TOKEN = os.environ['TELEGRAM_TOKEN']
+    CHAT_ID = os.environ['CHAT_ID']
     message = GetLatestTickersPrice(['TSLA','MSFT'])
     url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage?chat_id={CHAT_ID}&text={message}"
-    print(url)
     r = requests.get(url)
