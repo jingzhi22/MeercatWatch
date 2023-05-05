@@ -23,4 +23,5 @@ if __name__ == "__main__":
     CHAT_ID = "593517818"
     message = GetLatestTickersPrice(['TSLA','MSFT'])
     url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage?chat_id={CHAT_ID}&text={message}"
+    print(url)
     r = requests.get(url)
