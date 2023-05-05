@@ -32,16 +32,12 @@ exchange-calendars==4.2.4
 executing==0.10.0
 ffmpeg==1.4
 filelock==3.10.7
-Fiona @ file:///C:/Users/jingz/Downloads/Fiona-1.8.21-cp310-cp310-win_amd64.whl
 Flask==2.1.2
 Flask-WTF==1.0.1
 fonttools==4.28.5
 frozendict==2.3.4
 future==0.18.2
-GDAL @ file:///C:/Users/jingz/Downloads/GDAL-3.4.2-cp310-cp310-win_amd64.whl
 geographiclib==1.52
-geojson==2.5.0
-geopandas @ file:///C:/Users/jingz/Downloads/geopandas-0.10.2-py2.py3-none-any.whl
 geopy==2.2.0
 ghhops_server==1.5.4
 google-api-core==2.11.0
